@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamza Ishaq — Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #1a1a2e;
+      background: #ffffff;
+      line-height: 1.5;
+      font-size: 11pt;
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 40px 48px;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; line-height: 1.2; }
+
+    a { color: #0369a1; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 3px solid #0ea5e9;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .header-left h1 {
+      font-size: 28pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+
+    .header-left h2 {
+      font-size: 13pt;
+      font-weight: 500;
+      color: #0ea5e9;
+      margin-top: 2px;
+    }
+
+    .header-right {
+      text-align: right;
+      font-size: 10pt;
+      color: #475569;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 36px;
+    }
+
+    .section { margin-bottom: 22px; }
+
+    .section-title {
+      font-size: 12pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0f172a;
+      border-bottom: 1.5px solid #e2e8f0;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+    }
+
+    .summary {
+      font-size: 10.5pt;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .item { margin-bottom: 16px; }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .item-title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .item-date {
+      font-size: 9.5pt;
+      color: #0ea5e9;
+      font-weight: 600;
+    }
+
+    .item-org {
+      font-size: 10pt;
+      color: #64748b;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .bullets {
+      list-style: disc;
+      padding-left: 18px;
+      font-size: 10pt;
+      color: #334155;
+    }
+
+    .bullets li { margin-bottom: 4px; }
+
+    .skill-category { margin-bottom: 12px; }
+
+    .skill-category h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .tag {
+      font-size: 9pt;
+      padding: 3px 9px;
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 4px;
+      color: #0369a1;
+    }
+
+    .print-btn-container {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .print-btn {
+      background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+      color: white;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 8px;
+      font-size: 11pt;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .print-btn:hover { opacity: 0.9; }
+
+    @media print {
+      .print-btn-container { display: none; }
+      body { padding: 0; max-width: 100%; }
+      @page { margin: 1cm 1.5cm; size: A4 portrait; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="print-btn-container">
+  <button class="print-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<div class="header">
+  <div class="header-left">
+    <h1>Hamza Ishaq</h1>
+    <h2>Python Developer & AI Engineer</h2>
+  </div>
+  <div class="header-right">
+    <span>📧 <a href="mailto:hamzaishaq327@gmail.com">hamzaishaq327@gmail.com</a></span>
+    <span>🔗 <a href="https://github.com/hamzaishaq53" target="_blank">github.com/hamzaishaq53</a></span>
+    <span>🔗 <a href="https://www.linkedin.com/in/hamza-ishaq-ab10462b7/" target="_blank">linkedin.com/in/hamza-ishaq-ab10462b7</a></span>
+    <span>📍 Lahore, Pakistan (Remote Friendly)</span>
+  </div>
+</div>
+
+<div class="two-col">
+  <div>
+    <!-- Profile Summary -->
+    <div class="section">
+      <h3 class="section-title">Profile Summary</h3>
+      <p class="summary">
+        Passionate Python Developer and AI Engineer specializing in Computer Vision, Natural Language Processing (NLP),
+        and Machine Learning pipelines. Experienced in designing robust deep learning models and serving them through
+        efficient, high-performance backends (FastAPI, Flask) connected to modern user interfaces (React).
+        Committed to bridging the gap between intelligent models and production-ready applications.
+      </p>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <h3 class="section-title">Projects</h3>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Pro Monitoring System (FYP)</span>
+          <span class="item-date">2023 — 2024</span>
+        </div>
+        <div class="item-org">Final Year Project — Computer Vision Platform</div>
+        <ul class="bullets">
+          <li>Developed an automated activity and safety hazard visual monitoring system using computer vision.</li>
+          <li>Trained PyTorch and OpenCV-based object detection and anomaly tracking networks.</li>
+          <li>Engineered a FastAPI backend to broadcast low-latency WebSocket telemetry feeds.</li>
+          <li>Built an analytics telemetry dashboard in React to display alert queues in real-time.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Jarvis Voice AI Assistant</span>
+          <span class="item-date">2023</span>
+        </div>
+        <div class="item-org">Personal AI Automation Project</div>
+        <ul class="bullets">
+          <li>Built a modular speech-activated virtual assistant combining Whisper Speech-to-Text and TTS loops.</li>
+          <li>Designed an intent analysis module to route verbal commands to system files and API controllers.</li>
+          <li>Integrated real-time computer vision object triggers to alert the user based on camera captures.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Grammar Feedback Tool</span>
+          <span class="item-date">2024</span>
+        </div>
+        <div class="item-org">NLP Writing Analysis Platform</div>
+        <ul class="bullets">
+          <li>Developed an intelligent editor providing real-time phrasal recommendations.</li>
+          <li>Designed a Flask-based syntactic processing backend with sub-100ms response time.</li>
+          <li>Implemented a side-by-side diff renderer highlighting grammatical and spelling modifications.</li>
+          <li>Deployed to Railway for public access.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Developer Portfolio Website</span>
+          <span class="item-date">2024</span>
+        </div>
+        <div class="item-org">React + Vanilla CSS SPA</div>
+        <ul class="bullets">
+          <li>Engineered a premium portfolio featuring scroll-triggered animations, glassmorphism, and multi-theme support.</li>
+          <li>Built a custom interactive terminal simulator with Matrix rain, command history, and tab autocomplete.</li>
+          <li>Implemented an AI chatbot widget, confetti effects, and localStorage persistence — all without external UI libraries.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section">
+      <h3 class="section-title">Experience</h3>
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">AI & Python Developer</span>
+          <span class="item-date">2024 — Present</span>
+        </div>
+        <div class="item-org">Freelance / Self-Directed</div>
+        <ul class="bullets">
+          <li>Building AI-powered applications using Computer Vision, NLP, and Machine Learning.</li>
+          <li>Developing full-stack web applications and deploying them to production (Railway, Vercel).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <!-- Skills -->
+    <div class="section">
+      <h3 class="section-title">Core Skills</h3>
+
+      <div class="skill-category">
+        <h4>AI & Machine Learning</h4>
+        <div class="tags">
+          <span class="tag">Computer Vision</span>
+          <span class="tag">NLP</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">Deep Learning</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>Languages & Backends</h4>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Flask</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>Frontend & Web</h4>
+        <div class="tags">
+          <span class="tag">React.js</span>
+          <span class="tag">HTML5 / CSS3</span>
+          <span class="tag">Responsive Design</span>
+          <span class="tag">Vite</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>DevOps & Tools</h4>
+        <div class="tags">
+          <span class="tag">Docker</span>
+          <span class="tag">Git & GitHub</span>
+          <span class="tag">Railway</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Jupyter</span>
+          <span class="tag">Linux</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <h3 class="section-title">Education</h3>
+      <div class="item">
+        <span class="item-title">BS in Computer Science</span>
+        <div class="item-org">Lahore, Pakistan</div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div class="section">
+      <h3 class="section-title">Languages</h3>
+      <div class="tags">
+        <span class="tag">Urdu (Native)</span>
+        <span class="tag">English (Professional)</span>
+      </div>
+    </div>
+
+    <!-- Interests -->
+    <div class="section">
+      <h3 class="section-title">Interests</h3>
+      <p class="summary">
+        Artificial Intelligence, Open Source, Automation, System Design, Competitive Programming
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
